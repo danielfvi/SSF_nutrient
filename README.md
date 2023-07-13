@@ -5,5 +5,7 @@ Viana, D.F., Zamborain-Mason, J., Gaines, S.D., Schmidhuber, J. and Golden, C.D.
 
 Folders:
 Analysis - contains all codes used for analysis and generating figures
+
 Outputs - outputs from analysis
+
 data - data used in analysis
