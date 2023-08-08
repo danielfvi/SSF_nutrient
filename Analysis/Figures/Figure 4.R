@@ -116,6 +116,12 @@ SSF_intake = percent_nutrient_supply %>%
                               combined_score == 3 ~ "Vulnerable and reliant"),
          is_3 = if_else(combined_score == 3, 1, 0.8))
 
+# export_file = SSF_intake %>% 
+#   mutate(country =countrycode::countrycode(iso3c, origin = 'iso3c', destination = 'country.name')) %>% 
+#   dplyr::select(country, iso3c, perc_SSF, intake, category)
+# 
+# write.csv(export_file, "Outputs/SSF_categories.csv", row.names = F)
+
 SSF_intake$category = factor(SSF_intake$category, levels = factor.final)
 
 plot1 = ggplot(data = SSF_intake, aes(y=perc_SSF, x=intake, label = iso3c, color = category)) +
